@@ -1,0 +1,35 @@
+:root {
+  /*Color Palette*/
+  --base-color: #51937b;
+  --primary-color: #db222a;
+  --lightgrey-color: rgb(165, 165, 165);
+  --white-color: rgb(255, 255, 255);
+  --bg-color: white;
+  --text-dark: #1e1e1e;
+  --text-light: #ffffff;
+  --text-grey: rgb(98, 98, 98);
+  --title-color: rgb(72, 84, 90);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Cairo", "Inter", sans-serif;
+  box-sizing: border-box;
+}
+.hoverEffect {
+  cursor: pointer;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  touch-action: none; /* Prevent scrolling on touch devices */
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}

@@ -1,0 +1,220 @@
+@media (min-width: 320px) {
+  .how-work {
+    position: relative;
+    margin: 8em 0 3em 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .how-work h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    color: var(--title-color);
+  }
+  .how-work > h4 {
+    font-size: 0.8em;
+    color: var(--lightgrey-color);
+  }
+  .how-work > h4 span {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+  .d-contaner-white-border,
+  .d-container,
+  .d-cta-container {
+    border-radius: 25px;
+  }
+  .how-work-cta-container {
+    width: 100%;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .d-contaner-white-border {
+    position: relative;
+    border: 5px solid rgb(233, 233, 233);
+    height: 300px;
+    width: 85%;
+    margin: 0.5em 0;
+  }
+  .d-contaner-white-border:nth-child(2) {
+    transform: scale(0.9);
+    margin: 0.5em 0 0 0;
+  }
+  .d-contaner-white-border:nth-child(3) {
+    transform: scale(0.85);
+    margin: 0;
+  }
+  .d-contaner-white-border:last-child {
+    transform: scale(0.8);
+    margin: 0;
+  }
+  .d-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    width: 100%;
+    z-index: 3;
+    border-radius: 25px;
+  }
+  .d-contaner-white-border:last-child .d-one,
+  .d-contaner-white-border:last-child .d-two {
+    background-color: var(--primary-color);
+  }
+  .d-one,
+  .d-two {
+    position: absolute;
+    border: none;
+    background-color: var(--base-color);
+    z-index: 1;
+  }
+  .d-one,
+  .d-two {
+    height: 40%;
+    width: 40%;
+  }
+  .d-one {
+    top: -5px;
+    right: -5px;
+    border-top-right-radius: 25px;
+  }
+  .d-two {
+    bottom: -5px;
+    left: -5px;
+    border-bottom-left-radius: 25px;
+  }
+
+  .d-cta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .d-contaner-white-border:last-child svg,
+  .d-contaner-white-border:last-child h4 {
+    color: var(--primary-color);
+  }
+  .d-cta-container svg {
+    width: 100%;
+    font-size: 3em;
+    color: var(--base-color);
+    margin-bottom: 0.4em;
+  }
+  .d-cta-container h4 {
+    color: var(--base-color);
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.7em;
+  }
+  .d-cta-container p {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85em;
+    color: var(--lightgrey-color);
+  }
+  .d-cta-container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 375px) {
+  .d-contaner-white-border {
+    width: 80%;
+  }
+}
+@media (min-width: 425px) {
+  .how-work h1 {
+    font-size: 2em;
+  }
+  .how-work > h4 {
+    font-size: 1em;
+  }
+  .d-contaner-white-border {
+    height: 350px;
+  }
+  .d-cta-container svg {
+    font-size: 4em;
+    margin-bottom: 0.3em;
+  }
+  .d-cta-container h4 {
+    font-size: 1.3em;
+  }
+  .d-cta-container p {
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 768px) {
+  .how-work-cta-container {
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .d-contaner-white-border {
+    width: 40%;
+  }
+}
+@media (min-width: 1024px) {
+  .how-work {
+    margin-top: 5em;
+  }
+  .d-contaner-white-border {
+    width: 23%;
+    height: 320px;
+    align-items: flex-end;
+  }
+  .d-cta-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .d-cta-container svg {
+    width: auto;
+    font-size: 3.5em;
+    margin-bottom: 0.3em;
+  }
+  .d-cta-container h4 {
+    font-size: 1em;
+  }
+  .d-cta-container p {
+    font-size: 0.8em;
+    text-align: left;
+  }
+}
+@media (min-width: 1440px) {
+  .how-work h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+  .how-work > h4 {
+    font-size: 1.2em;
+  }
+  .d-contaner-white-border {
+    height: 370px;
+  }
+  .d-cta-container svg {
+    font-size: 5em;
+    margin-bottom: 0.2em;
+  }
+  .d-cta-container h4 {
+    font-size: 1.3em;
+  }
+  .d-cta-container p {
+    font-size: 1em;
+    text-align: left;
+  }
+}

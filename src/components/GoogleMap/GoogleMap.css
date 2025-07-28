@@ -1,0 +1,84 @@
+@media (min-width: 768px) {
+  .map-container {
+    margin-top: 0.6em;
+    width: 100%;
+    height: 120px;
+  }
+}
+@media (min-width: 1024px) {
+  .map-container {
+    margin-top: 0.6em;
+    width: 100%;
+    height: 150px;
+  }
+}
+@media (min-width: 1440px) {
+  .map-container {
+    margin-top: 0.6em;
+    width: 90%;
+    height: 200px;
+  }
+}
+/* GoogleMap.css */
+.rotating-marker {
+  transform: translate(-50%, -100%);
+  perspective: 1000px;
+}
+
+.rotating-logo {
+  width: 30px;
+  height: 30px;
+  animation: spin 6s linear infinite;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.8));
+  border-radius: 50%;
+  padding: 2px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotateY(180deg) rotateX(15deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(0deg);
+  }
+}
+/* Zoom button container (controls box) */
+.gm-bundled-control .gmnoprint {
+  transform: scale(0.6); /* Shrinks container and buttons */
+  transform-origin: bottom right;
+  margin: 0.75rem !important;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  background: #fff; /* Ensure background visibility */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Individual Zoom Buttons */
+.gm-bundled-control .gmnoprint button {
+  width: 28px !important;
+  height: 28px !important;
+  font-size: 16px !important;
+  color: #333 !important;
+  background-color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  margin: 3px 0 !important;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for buttons */
+.gm-bundled-control .gmnoprint button:hover {
+  background-color: #f0f0f0 !important;
+  transform: scale(1.05);
+}
+.gm-bundled-control {
+  bottom: 2rem !important;
+  right: 2rem !important;
+}

@@ -1,0 +1,395 @@
+@media (min-width: 320px) {
+  .why-us {
+    position: relative;
+    width: 100%;
+    margin: 5em 0 5em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .why-us-container {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .about-cta-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-cta h5 {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  .about-cta h1 {
+    font-size: 1.5em;
+    color: rgb(72, 84, 90);
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .about-cta .puls {
+    font-size: 2em;
+    color: var(--primary-color);
+  }
+  .about-cta p {
+    color: black;
+    font-size: 0.85em;
+  }
+  .about-cta ul {
+    list-style: none;
+    margin-top: 1em;
+  }
+  .about-cta li {
+    line-height: 1.3;
+    margin: 2px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: grey;
+  }
+  .about-cta svg {
+    margin: 0 3px;
+    color: green;
+  }
+  .about-us-btn {
+    margin-top: 25px;
+    background-color: var(--primary-color);
+    border-radius: 25px;
+    border: none;
+    width: 150px;
+    padding: 2% 2%;
+    font-size: 0.85em;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 2px 5px var(--primary-color);
+  }
+  /*--------- hexgon Styling ---------*/
+  .hexagon-wrapper {
+    margin: 4em 0 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+  }
+  .dot-pattern-bg {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 80%;
+    height: 80%;
+    z-index: 0;
+  }
+  .hexagon-border {
+    width: 200px; /* outer hexagon size */
+    height: 230px;
+    background: rgb(236, 236, 236); /* border color */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px 5px grey;
+  }
+  .hexagon-container {
+    width: 190px; /* inner hexagon image */
+    height: 220px;
+    overflow: hidden;
+    clip-path: inherit;
+  }
+
+  .hexagon-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cutome-border-two {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    bottom: -10px;
+    right: 0px;
+  }
+  .customer-hexagon-two {
+    width: 100px;
+    height: 110px;
+  }
+  .cutome-border-three {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+  }
+  .customer-hexagon-three {
+    width: 120px;
+    height: 120px;
+  }
+  .play-button {
+    position: absolute;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(241, 241, 241);
+    color: var(--primary-color);
+    box-shadow: 0px 0px 5px 1px rgb(180, 180, 180);
+    z-index: 5;
+    font-size: 3em;
+    top: 15px;
+    right: 50px;
+  }
+
+  /*--------------------------------------------*/
+  .services {
+    margin-top: 1.5em;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .services-cta-container {
+    padding: 1em;
+    width: 100%;
+    background-color: rgb(123, 204, 219);
+  }
+  .services-cta-container h3 {
+    font-size: 1.5em;
+    color: white;
+  }
+  .services-cta-container h3:nth-child(2) {
+    color: var(--primary-color);
+  }
+}
+@media (min-width: 375px) {
+  .about-cta h5 {
+    font-size: 0.95em;
+  }
+  .about-cta h1 {
+    font-size: 1.7em;
+  }
+  .about-cta p {
+    font-size: 0.85em;
+  }
+}
+@media (min-width: 425px) {
+  .about-cta h5 {
+    font-size: 1em;
+  }
+  .about-cta h1 {
+    font-size: 1.9em;
+  }
+  .about-cta p {
+    font-size: 0.95em;
+  }
+  .about-cta li {
+    font-size: 1em;
+  }
+  .about-cta svg {
+    font-size: 1.2em;
+  }
+  .hexagon-border {
+    width: 230px; /* outer hexagon size */
+    height: 260px;
+  }
+  .hexagon-container {
+    width: 220px; /* inner hexagon image */
+    height: 250px;
+  }
+
+  .cutome-border-two {
+    width: 130px;
+    height: 140px;
+    bottom: -20px;
+    right: -30px;
+  }
+  .customer-hexagon-two {
+    width: 120px;
+    height: 130px;
+  }
+  .cutome-border-three {
+    width: 150px;
+    height: 160px;
+    bottom: 10px;
+    left: -40px;
+  }
+  .customer-hexagon-three {
+    width: 140px;
+    height: 150px;
+  }
+  .play-button {
+    font-size: 3.5em;
+    top: -5px;
+    right: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .why-us-container {
+    width: 90%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+  }
+  .about-cta-container {
+    width: 50%;
+  }
+  .about-cta {
+    width: 100%;
+  }
+  .hexagon-wrapper {
+    margin: 0;
+    width: 270px;
+    height: 270px;
+  }
+  .about-cta h5 {
+    font-size: 1em;
+  }
+  .about-cta h1 {
+    font-size: 1.7em;
+  }
+  .about-cta p {
+    font-size: 0.9em;
+  }
+  .about-cta li {
+    font-size: 0.95em;
+  }
+  .play-button {
+    font-size: 3.5em;
+    top: 5px;
+    right: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .about-cta h5 {
+    font-size: 1.5em;
+  }
+  .about-cta h1 {
+    font-size: 2.5em;
+  }
+  .about-cta p {
+    font-size: 1em;
+  }
+  .about-cta li {
+    font-size: 1.1em;
+  }
+  .about-cta svg {
+    font-size: 1.2em;
+  }
+  .about-us-btn {
+    font-size: 1em;
+    padding: 1% 2%;
+  }
+  .hexagon-wrapper {
+    width: 40%;
+    height: 320px;
+  }
+  .hexagon-border {
+    width: 280px; /* outer hexagon size */
+    height: 300px;
+  }
+  .hexagon-container {
+    width: 270px; /* inner hexagon image */
+    height: 290px;
+  }
+
+  .cutome-border-two {
+    width: 140px;
+    height: 160px;
+    bottom: -20px;
+    right: 0px;
+  }
+  .customer-hexagon-two {
+    width: 130px;
+    height: 150px;
+  }
+  .cutome-border-three {
+    width: 180px;
+    height: 200px;
+    bottom: 10px;
+    left: -20px;
+  }
+  .customer-hexagon-three {
+    width: 170px;
+    height: 190px;
+  }
+  .play-button {
+    font-size: 3.5em;
+    top: 15px;
+    right: 90px;
+  }
+}
+@media (min-width: 1440px) {
+  .about-cta h5 {
+    font-size: 2em;
+  }
+  .about-cta h1 {
+    font-size: 3.2em;
+  }
+  .about-cta .puls {
+    font-size: 3em;
+  }
+  .about-cta p {
+    font-size: 1.5em;
+  }
+  .about-cta li {
+    font-size: 1.5em;
+  }
+  .about-cta svg {
+    font-size: 1.3em;
+  }
+  .about-us-btn {
+    margin-top: 2em;
+    width: 250px;
+    font-size: 1.5em;
+  }
+  .hexagon-wrapper {
+    width: 45%;
+    height: 400px;
+  }
+  .hexagon-border {
+    width: 420px; /* outer hexagon size */
+    height: 450px;
+  }
+  .hexagon-container {
+    width: 410px; /* inner hexagon image */
+    height: 440px;
+  }
+
+  .cutome-border-two {
+    width: 220px;
+    height: 250px;
+    bottom: -80px;
+    right: 30px;
+  }
+  .customer-hexagon-two {
+    width: 210px;
+    height: 240px;
+  }
+  .cutome-border-three {
+    width: 250px;
+    height: 320px;
+    bottom: -70px;
+    left: -20px;
+  }
+  .customer-hexagon-three {
+    width: 240px;
+    height: 310px;
+  }
+  .play-button {
+    font-size: 5em;
+    top: 0px;
+    right: 2em;
+  }
+}

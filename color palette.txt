@@ -1,0 +1,2 @@
+--base-color : #51937B
+--primary-color : #DB222A

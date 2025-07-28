@@ -1,0 +1,584 @@
+@media (min-width: 320px) {
+  .hero {
+    position: relative;
+    margin-top: 10px;
+    height: 88.5dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-content-container {
+    padding: 4% 4% 1%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .hero-heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35%;
+  }
+  .hero-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-cta-container {
+    width: 95%;
+    text-align: center;
+  }
+  .hero-cta-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #db222a, rgb(164, 164, 164));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Optional for Firefox */
+    text-fill: transparent;
+  }
+  .hero-cta-container p {
+    font-size: 0.8em;
+    color: rgb(98, 98, 98);
+  }
+  .hero-social-icons {
+    position: absolute;
+    bottom: 1.5em;
+    right: 2em;
+  }
+
+  .hero-social-icons hr {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 2px;
+    border: none;
+    background-color: var(--base-color);
+    border-radius: 25px;
+    height: 100%;
+  }
+  .hero-social-icons ul {
+    list-style: none;
+  }
+
+  .hero-social-icons li {
+    font-size: 1.2em;
+    margin: 2% 0;
+    color: var(--lightgrey-color);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .hero-social-icons li:hover {
+    color: var(--base-color);
+  }
+  .hero-btn {
+    justify-self: center;
+    position: relative;
+    margin-top: 30px;
+    padding: 3% 30px;
+    border-radius: 30px;
+    width: 150px;
+    display: flex;
+
+    align-items: center;
+    background-color: var(--base-color);
+    box-shadow: 1px 1px 5px 4px var(--base-color);
+  }
+  .hero-btn p {
+    width: 100%;
+    color: white;
+    text-align: left;
+  }
+  .hero-btn svg {
+    background-color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 2em;
+    position: absolute;
+    right: 5px;
+    color: var(--base-color);
+  }
+  .hero-counter {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .hero-counter > div {
+    padding: 2%;
+    text-align: center;
+  }
+  .hero-counter hr {
+    width: 1px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(181, 181, 181);
+  }
+  .hero-counter hr:last-child {
+    display: none;
+  }
+  .hero-counter h3 {
+    font-size: 0.7em;
+    color: var(--base-color);
+    font-weight: bolder;
+    margin-bottom: 5px;
+  }
+  .hero-counter span {
+    font-size: 1em;
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--lightgrey-color);
+  }
+  .hero-counter span svg {
+    font-size: 0.5em;
+    margin-right: 5px;
+  }
+  /*---------- Background blob styling -------*/
+
+  .blurred-blob {
+    position: absolute;
+    filter: blur(10px);
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+    width: 700px;
+    height: 700px;
+  }
+  .blurred-blob-green {
+    position: absolute;
+    filter: blur(10px);
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+    width: 800px;
+    height: 800px;
+  }
+  .blurred-blob {
+    top: -45%;
+    right: -110%;
+  }
+  .blurred-blob-green {
+    left: -130%;
+    bottom: -50%;
+  }
+
+  /*----------- Glow Effect -----------*/
+  .glow-circle {
+    display: none;
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, #51937b, #db222a);
+    filter: blur(140px);
+    opacity: 0.4;
+    mix-blend-mode: screen;
+    z-index: 0;
+  }
+
+  /* Base glow (green-red) */
+  .glow-circle.one {
+    width: 500px;
+    height: 500px;
+    animation: moveOne 20s ease-in-out infinite;
+  }
+
+  /* Glow two */
+  .glow-circle.two {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, #db222a, #51937b);
+    opacity: 0.3;
+    animation: moveTwo 30s ease-in-out infinite;
+    animation-delay: 5s;
+  }
+
+  /* Glow three */
+  .glow-circle.three {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #ffffff20, #51937b66);
+    opacity: 0.25;
+    animation: moveThree 42s ease-in-out infinite;
+    animation-delay: 8s;
+  }
+
+  /* Glow four */
+  .glow-circle.four {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #ff6b6b33, #ffffff11);
+    opacity: 0.2;
+    animation: moveFour 50s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  /* Glow five */
+  .glow-circle.five {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, #ffffff22, #db222a33);
+    opacity: 0.2;
+    animation: moveFive 60s ease-in-out infinite;
+    animation-delay: 3s;
+  }
+}
+@media (min-width: 375px) {
+  .hero {
+    margin-top: 8%;
+  }
+  .hero-content-container {
+    padding: 0% 4% 1%;
+  }
+  .hero-social-icons {
+    bottom: 2.5em;
+    right: 2em;
+  }
+  /*----------- Background blob styling ----------*/
+  .blurred-blob {
+    right: -85%;
+  }
+  .blurred-blob-green {
+    left: -100%;
+    bottom: -50%;
+  }
+}
+@media (min-width: 425px) {
+  .hero-heart-container {
+    width: 100%;
+  }
+
+  .hero-cta-container h2 {
+    justify-self: center;
+    width: 80%;
+    font-size: 1.6em;
+  }
+  .hero-cta-container p {
+    font-size: 0.85em;
+    color: rgb(98, 98, 98);
+  }
+  .hero-btn p {
+    color: white;
+  }
+  /*----------- Background blob styling ----------*/
+  .blurred-blob {
+    right: -70%;
+  }
+  .blurred-blob-green {
+    left: -90%;
+    bottom: -45%;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    margin-top: 0;
+    position: relative;
+    min-height: 100dvh;
+  }
+  .hero-heart-container {
+    width: 100%;
+    height: 65%;
+  }
+  .hero-content-container {
+    padding: 4% 4% 1%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-cta-container {
+    width: 100%;
+    text-align: left;
+  }
+  .hero-cta-container h2 {
+    width: 100%;
+    font-size: 2.1em;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #db222a, rgb(164, 164, 164));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Optional for Firefox */
+    text-fill: transparent;
+  }
+  .hero-cta-container p {
+    font-size: 0.9em;
+    color: rgb(98, 98, 98);
+  }
+  .hero-btn {
+    width: 170px;
+    justify-self: flex-start;
+  }
+  .hero-btn p {
+    color: white;
+  }
+  .hero-counter {
+    justify-content: space-between;
+  }
+  .hero-counter h3 {
+    font-size: 0.9em;
+    color: var(--base-color);
+    font-weight: bolder;
+    margin-bottom: 5px;
+  }
+  .hero-counter span {
+    font-size: 1.4em;
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--lightgrey-color);
+  }
+  .hero-counter span svg {
+    font-size: 0.7em;
+    margin-right: 5px;
+  }
+  /*---------- Background blob styling -------*/
+
+  .blurred-blob,
+  .blurred-blob-green {
+    position: absolute;
+    filter: blur(10px);
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .blurred-blob {
+    top: -20%;
+    right: -40%;
+  }
+  .blurred-blob-green {
+    left: -50%;
+    bottom: -50%;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-content-container {
+    padding: 4% 6% 1%;
+  }
+  .hero-heart-container {
+    width: 100%;
+    height: 70%;
+  }
+  .hero-left {
+    width: 85%;
+  }
+  .hero-cta-container {
+    justify-self: flex-start;
+    width: 100%;
+    text-align: left;
+  }
+  .hero-cta-container h2 {
+    width: 100%;
+    font-size: 2.4em;
+    margin-bottom: 20px;
+  }
+  .hero-cta-container p {
+    font-size: 1em;
+  }
+  .hero-btn {
+    width: 180px;
+    padding: 2% 5%;
+    justify-self: flex-start;
+    z-index: 2;
+  }
+  .hero-btn p {
+    color: white;
+  }
+  .hero-counter {
+    z-index: 2;
+    justify-content: space-between;
+  }
+  .hero-counter h3 {
+    font-size: 0.9em;
+    color: var(--base-color);
+    font-weight: bolder;
+    margin-bottom: 5px;
+  }
+  .hero-counter span {
+    font-size: 1.4em;
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--lightgrey-color);
+  }
+  .hero-counter span svg {
+    font-size: 0.7em;
+    margin-right: 5px;
+  }
+  .hero-social-icons {
+    right: 3em;
+  }
+  .hero-social-icons ul li {
+    font-size: 1.6em;
+  }
+  /*---------- Background blob styling -------*/
+
+  .blurred-blob,
+  .blurred-blob-green {
+    position: absolute;
+    filter: blur(10px);
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .blurred-blob {
+    top: -20%;
+    right: -30%;
+  }
+  .blurred-blob-green {
+    left: -30%;
+    bottom: -40%;
+  }
+}
+@media (min-width: 1440px) {
+  .hero-cta-container h2 {
+    width: 100%;
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  .hero-heart-container {
+    height: 85%;
+  }
+  .hero-cta-container p {
+    font-size: 1.5em;
+  }
+  .hero-btn {
+    width: 250px;
+    padding: 1.5% 5%;
+    justify-self: flex-start;
+  }
+  .hero-btn p {
+    color: white;
+  }
+  .hero-btn svg {
+    width: 40px;
+    height: 40px;
+  }
+  .hero-counter {
+    justify-content: space-between;
+  }
+  .hero-counter h3 {
+    font-size: 1.4em;
+    color: var(--base-color);
+    font-weight: bolder;
+    margin-bottom: 5px;
+  }
+  .hero-counter span {
+    font-size: 1.3em;
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--lightgrey-color);
+  }
+  .hero-counter span svg {
+    font-size: 0.7em;
+    margin-right: 5px;
+  }
+  /*---------- Background blob styling -------*/
+  .blurred-blob-green,
+  .blurred-blob {
+    width: 1200px;
+    height: 1200px;
+  }
+  .blurred-blob {
+    top: -40%;
+    right: -30%;
+  }
+  .blurred-blob-green {
+    left: -30%;
+    bottom: -70%;
+  }
+}
+
+@keyframes moveOne {
+  0% {
+    top: 20%;
+    left: 10%;
+  }
+  50% {
+    top: 50%;
+    left: 70%;
+    transform: scale(1.2);
+  }
+  100% {
+    top: 20%;
+    left: 10%;
+  }
+}
+@keyframes moveTwo {
+  0% {
+    top: 70%;
+    left: 20%;
+  }
+  50% {
+    top: 30%;
+    left: 60%;
+    transform: scale(0.95);
+  }
+  100% {
+    top: 70%;
+    left: 20%;
+  }
+}
+@keyframes moveThree {
+  0% {
+    top: 50%;
+    left: 80%;
+  }
+  50% {
+    top: 20%;
+    left: 40%;
+    transform: scale(1.1);
+  }
+  100% {
+    top: 50%;
+    left: 80%;
+  }
+}
+@keyframes moveFour {
+  0% {
+    top: 10%;
+    left: 60%;
+  }
+  50% {
+    top: 70%;
+    left: 10%;
+    transform: scale(1.05);
+  }
+  100% {
+    top: 10%;
+    left: 60%;
+  }
+}
+@keyframes moveFive {
+  0% {
+    top: 30%;
+    left: 50%;
+  }
+  50% {
+    top: 60%;
+    left: 80%;
+    transform: scale(0.85);
+  }
+  100% {
+    top: 30%;
+    left: 50%;
+  }
+}

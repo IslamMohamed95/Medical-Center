@@ -1,0 +1,52 @@
+.canvas-logo-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.logo-content-container {
+  width: 200px;
+}
+.canvas-logo-wrapper p {
+  font-size: 0.7em;
+  width: 35%;
+  font-weight: bold;
+  color: var(--base-color);
+}
+.canvas-logo-wrapper p span {
+  word-break: break-word;
+  color: var(--primary-color);
+}
+
+@media (min-width: 320px) {
+  .canvas-logo-wrapper p {
+    font-size: 0.7em;
+  }
+}
+@media (min-width: 375px) {
+  .canvas-logo-wrapper {
+    height: 15dvh;
+  }
+  .canvas-logo-wrapper p {
+    font-size: 0.8em;
+  }
+}
+@media (min-width: 425px) {
+}
+@media (min-width: 768px) {
+  .canvas-logo-wrapper {
+    height: 15dvh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .canvas-logo-wrapper {
+    width: 250px;
+  }
+  .canvas-logo-wrapper p {
+    font-size: 1em;
+  }
+}

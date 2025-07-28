@@ -1,0 +1,285 @@
+@media (min-width: 320px) {
+  .nav {
+    height: fit-content;
+    position: relative;
+  }
+  .sub-nav {
+    display: none;
+  }
+  .main-nav {
+    height: 10dvh;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+  }
+  .nav-menu {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-25px, 32px) rotate(0deg);
+    transition: all 0.3s ease-in-out;
+    z-index: 3;
+  }
+  .nav-menu.open {
+    transform: translate(-25px, 32px) rotate(-180deg);
+  }
+  .nav-menu span {
+    height: 2px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+  }
+  .nav-menu span:first-child {
+    top: 0;
+  }
+  .nav-menu span:last-child {
+    bottom: 0;
+  }
+  .nav-menu span:first-child,
+  .nav-menu span:last-child {
+    width: 70%;
+    position: absolute;
+  }
+  .nav-menu span:nth-child(2) {
+    width: 100%;
+  }
+  /* Transformations when menu is open */
+  .nav-menu.open span:first-child {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .nav-menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-menu.open span:last-child {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  .nav-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100dvh;
+    overflow: hidden;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease-in-out;
+  }
+  .nav-list.open {
+    width: 100%;
+  }
+  .nav-list ul {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 1em;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav-list ul.open {
+    opacity: 1;
+  }
+  .nav-list ul li {
+    white-space: nowrap;
+    margin: 1.5em 0;
+    font-weight: 400;
+    color: rgb(74, 74, 74);
+  }
+  .nav-btn {
+    width: 100%;
+    text-align: center;
+  }
+  .nav-btn button {
+    border: none;
+    background-color: var(--primary-color);
+    box-shadow: 0px 0px 5px 2px var(--primary-color);
+    padding: 2.5% 5%;
+    border-radius: 25px;
+    color: white;
+    width: fit-content;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 375px) {
+  .nav-menu {
+    transform: translate(-35px, 47px) rotate(0deg);
+  }
+  .nav-menu.open {
+    transform: translate(-35px, 47px) rotate(-180deg);
+  }
+}
+@media (min-width: 425px) {
+  .nav-menu {
+    transform: translate(-40px, 47px) rotate(0deg);
+  }
+  .nav-menu.open {
+    transform: translate(-40px, 47px) rotate(-180deg);
+  }
+}
+@media (min-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  .nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+  }
+  .sub-nav {
+    height: 4dvh;
+    width: 100%;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    background-color: var(--base-color);
+  }
+  .sub-nav a {
+    text-decoration: none;
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    font-size: 0.7em;
+  }
+  .sub-nav a svg {
+    margin: 0 8px;
+    font-size: 1.2em;
+  }
+  .main-nav {
+    top: 0;
+    left: 0;
+    height: 13dvh;
+    padding: 0 0 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-logo {
+    width: 20%;
+  }
+  .nav-list {
+    padding: 0 5%;
+    border-radius: 0;
+    height: auto;
+    position: relative;
+    height: 100%;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .nav-list ul {
+    opacity: 1;
+    width: 75%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    position: relative; /* Needed for positioning .underline */
+  }
+
+  .nav-list ul li {
+    font-size: 0.7em;
+    color: var(--base-color);
+    cursor: pointer;
+    font-weight: light;
+    position: relative;
+    padding: 0.5em 0;
+    margin: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav-list ul li.active {
+    transform: scale(1.2);
+  }
+
+  /* Smooth animated underline (moved using JS) */
+  .nav-list ul .underline {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: #51937b;
+    border-radius: 2px;
+    transition: left 0.5s ease, width 0.5s ease;
+    left: 0;
+    width: 0;
+    pointer-events: none;
+  }
+
+  .nav-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(70% / 2);
+    height: 100%;
+  }
+
+  .nav-btn button {
+    background-color: var(--primary-color);
+    box-shadow: 0px 0px 4px 2px var(--primary-color);
+    border: none;
+    border-radius: 40px;
+    padding: 3% 8%;
+    color: white;
+    font-size: 0.6em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-list {
+    padding: 0 5%;
+    width: 80%;
+  }
+  .nav-list ul {
+    width: 80%;
+  }
+  .nav-list ul li {
+    font-size: 0.9em;
+  }
+  .nav-btn button {
+    padding: 3% 8%;
+    font-size: 0.75em;
+  }
+}
+@media (min-width: 1440px) {
+  .sub-nav {
+    padding: 0 4%;
+  }
+  .sub-nav a {
+    font-size: 0.9em;
+  }
+  .nav-list ul li {
+    font-size: 1.3em;
+  }
+  .nav-btn button {
+    font-size: 1.2em;
+    padding: 2% 8%;
+  }
+}
